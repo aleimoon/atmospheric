@@ -132,9 +132,8 @@ public class AtmosphericBiomes {
 			spawns.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.STRAY, 80, 4, 4));
 		}
 
-		return biome(snowy, !snowy ? 2.0F : 0.0F, 0.0F, 8499188, 5275555, 13021599, spawns, generation, null);
-	} 
- // snowy water : 9611217, 8625351
+		return biome(snowy, !snowy ? 2.0F : 0.0F, 0.0F, !snowy ? 8499188 : 9611217, !snowy ? 5275555 : 8625351, 13021599, spawns, generation, null);
+	}
 
 	private static Biome aspenParkland(HolderGetter<PlacedFeature> features, HolderGetter<ConfiguredWorldCarver<?>> carvers) {
 		BiomeGenerationSettings.Builder generation = new BiomeGenerationSettings.Builder(features, carvers);
@@ -180,7 +179,7 @@ public class AtmosphericBiomes {
 		BiomeDefaultFeatures.farmAnimals(spawns);
 		spawns.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.WOLF, 5, 4, 4));
 
-		return biomeWithGrass(true, 0.85F, 0.5F, 12249691, 11392595, 9032925, 9160644, spawns, generation, Musics.createGameMusic(SoundEvents.MUSIC_BIOME_FOREST));
+		return biomeWithGrass(true, 0.85F, 0.5F, 9743701, 11392595, 9032925, 9160644, spawns, generation, Musics.createGameMusic(SoundEvents.MUSIC_BIOME_FOREST));
 	}
 
 	private static Biome hotSprings(HolderGetter<PlacedFeature> features, HolderGetter<ConfiguredWorldCarver<?>> carvers) {

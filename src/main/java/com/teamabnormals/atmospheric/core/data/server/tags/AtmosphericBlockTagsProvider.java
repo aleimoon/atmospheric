@@ -3,6 +3,7 @@ package com.teamabnormals.atmospheric.core.data.server.tags;
 import com.teamabnormals.atmospheric.common.block.CandleGateauBlock;
 import com.teamabnormals.atmospheric.core.Atmospheric;
 import com.teamabnormals.atmospheric.core.other.AtmosphericConstants;
+import com.teamabnormals.atmospheric.core.other.tags.AtmosphericBlockTags;
 import com.teamabnormals.blueprint.core.other.tags.BlueprintBlockTags;
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.data.PackOutput;
@@ -56,7 +57,7 @@ public class AtmosphericBlockTagsProvider extends BlockTagsProvider {
 				PEACH_TRAVERTINE.get(), CHISELED_PEACH_TRAVERTINE.get(), CUT_PEACH_TRAVERTINE.get(), PEACH_TRAVERTINE_SLAB.get(), PEACH_TRAVERTINE_STAIRS.get(), PEACH_TRAVERTINE_WALL.get(),
 				PERSIMMON_TRAVERTINE.get(), CHISELED_PERSIMMON_TRAVERTINE.get(), CUT_PERSIMMON_TRAVERTINE.get(), PERSIMMON_TRAVERTINE_SLAB.get(), PERSIMMON_TRAVERTINE_STAIRS.get(), PERSIMMON_TRAVERTINE_WALL.get(),
 				SAFFRON_TRAVERTINE.get(), CHISELED_SAFFRON_TRAVERTINE.get(), CUT_SAFFRON_TRAVERTINE.get(), SAFFRON_TRAVERTINE_SLAB.get(), SAFFRON_TRAVERTINE_STAIRS.get(), SAFFRON_TRAVERTINE_WALL.get(),
-				DOLERITE.get(), DOLERITE_SLAB.get(), DOLERITE_STAIRS.get(), DOLERITE_WALL.get(), POLISHED_DOLERITE.get(), POLISHED_DOLERITE_SLAB.get(), POLISHED_DOLERITE_STAIRS.get(),  POLISHED_DOLERITE_WALL.get(),
+				DOLERITE.get(), DOLERITE_SLAB.get(), DOLERITE_STAIRS.get(), DOLERITE_WALL.get(), POLISHED_DOLERITE.get(), POLISHED_DOLERITE_SLAB.get(), POLISHED_DOLERITE_STAIRS.get(), POLISHED_DOLERITE_WALL.get(),
 				ARID_SANDSTONE.get(), ARID_SANDSTONE_SLAB.get(), ARID_SANDSTONE_STAIRS.get(), ARID_SANDSTONE_WALL.get(), SMOOTH_ARID_SANDSTONE.get(), SMOOTH_ARID_SANDSTONE_SLAB.get(), SMOOTH_ARID_SANDSTONE_STAIRS.get(), CUT_ARID_SANDSTONE.get(), CUT_ARID_SANDSTONE_SLAB.get(), CHISELED_ARID_SANDSTONE.get(),
 				RED_ARID_SANDSTONE.get(), RED_ARID_SANDSTONE_SLAB.get(), RED_ARID_SANDSTONE_STAIRS.get(), RED_ARID_SANDSTONE_WALL.get(), SMOOTH_RED_ARID_SANDSTONE.get(), SMOOTH_RED_ARID_SANDSTONE_SLAB.get(), SMOOTH_RED_ARID_SANDSTONE_STAIRS.get(), CUT_RED_ARID_SANDSTONE.get(), CUT_RED_ARID_SANDSTONE_SLAB.get(), CHISELED_RED_ARID_SANDSTONE.get(),
 				CARMINE_BLOCK.get(), CARMINE_SHINGLES.get(), CARMINE_SHINGLE_SLAB.get(), CARMINE_SHINGLE_STAIRS.get(), CARMINE_SHINGLE_WALL.get(), CHISELED_CARMINE_SHINGLES.get(), CARMINE_PAVEMENT.get(), CARMINE_PAVEMENT_SLAB.get(), CARMINE_PAVEMENT_STAIRS.get(), CARMINE_PAVEMENT_WALL.get()
@@ -110,7 +111,7 @@ public class AtmosphericBlockTagsProvider extends BlockTagsProvider {
 		this.tag(BlockTags.WOLVES_SPAWNABLE_ON).add(CRUSTOSE.get());
 		this.tag(BlockTags.FALL_DAMAGE_RESETTING).add(GRIMWEB.get());
 		this.tag(BlockTags.IMPERMEABLE).add(ARID_GLASS.get());
-		this.tag(BlockTags.COMBINATION_STEP_SOUND_BLOCKS).addTag(MONKEY_BRUSH).add(HANGING_CURRANT.get(), GOLDEN_GROWTHS.get(), ALOE_VERA.get(), TALL_ALOE_VERA.get(), ARID_SPROUTS.get(), WATER_HYACINTH.get(), DRAGON_ROOTS.get(), YUCCA_FLOWER.get(), TALL_YUCCA_FLOWER.get(), YUCCA_SAPLING.get(), YUCCA_BRANCH.get());
+		this.tag(BlockTags.COMBINATION_STEP_SOUND_BLOCKS).addTag(MONKEY_BRUSH).add(HANGING_CURRANT.get(), GOLDEN_GROWTHS.get(), ALOE_VERA.get(), TALL_ALOE_VERA.get(), ARID_SPROUTS.get(), WATER_HYACINTH.get(), DRAGON_ROOTS.get(), YUCCA_FLOWER.get(), TALL_YUCCA_FLOWER.get(), YUCCA_SAPLING.get(), YUCCA_BRANCH.get(), AGAVE.get());
 		this.tag(BlockTags.INSIDE_STEP_SOUND_BLOCKS).add(BARREL_CACTUS.get());
 		this.tag(Tags.Blocks.STRIPPED_LOGS).add(STRIPPED_ROSEWOOD_LOG.get(), STRIPPED_MORADO_LOG.get(), STRIPPED_YUCCA_LOG.get(), STRIPPED_ASPEN_LOG.get(), STRIPPED_KOUSA_LOG.get(), STRIPPED_LAUREL_LOG.get(), STRIPPED_GRIMWOOD_LOG.get());
 		this.tag(Tags.Blocks.STRIPPED_WOODS).add(STRIPPED_ROSEWOOD.get(), STRIPPED_MORADO_WOOD.get(), STRIPPED_YUCCA_WOOD.get(), STRIPPED_ASPEN_WOOD.get(), STRIPPED_KOUSA_WOOD.get(), STRIPPED_LAUREL_WOOD.get(), STRIPPED_GRIMWOOD.get());
@@ -140,6 +141,7 @@ public class AtmosphericBlockTagsProvider extends BlockTagsProvider {
 		this.tag(ORANGES).add(ORANGE.get(), BLOOD_ORANGE.get());
 		this.tag(COCHINEALS_CAN_FEED_ON).add(Blocks.CACTUS, SNOWY_CACTUS.get());
 		this.tag(CRUSTOSE_CANNOT_SPREAD_UNDER).addOptional(AtmosphericConstants.ADZUKI_SPROUTS);
+		this.tag(CAMEL_ARID_SAND_STEP_SOUND_BLOCKS).add(ARID_SAND.get(), RED_ARID_SAND.get());
 
 		this.tag(DROPS_YUCCA_GATEAU_SLICE).add(YUCCA_GATEAU.get());
 		CandleGateauBlock.getCandleGateaus().forEach(block -> {

@@ -40,11 +40,11 @@ public class AtmosphericProperties {
 	public static final WoodSetProperties ROSEWOOD = WoodSetProperties.builder(MapColor.TERRACOTTA_MAGENTA).build();
 	public static final WoodSetProperties MORADO = WoodSetProperties.builder(MapColor.COLOR_RED).build();
 	public static final WoodSetProperties YUCCA = WoodSetProperties.builder(MapColor.COLOR_ORANGE).leavesSound(AtmosphericSoundTypes.YUCCA_LEAVES).build();
-	public static final WoodSetProperties ASPEN = WoodSetProperties.builder(MapColor.GOLD).leavesColor(MapColor.GOLD).build();
-	public static final WoodSetProperties GREEN_ASPEN = WoodSetProperties.builder(MapColor.GOLD).leavesColor(MapColor.TERRACOTTA_LIGHT_GREEN).build();
-	public static final WoodSetProperties LAUREL = WoodSetProperties.builder(MapColor.TERRACOTTA_YELLOW).leavesColor(MapColor.TERRACOTTA_LIGHT_GREEN).build();
-	public static final WoodSetProperties DRY_LAUREL = WoodSetProperties.builder(MapColor.TERRACOTTA_YELLOW).leavesColor(MapColor.SAND).build();
-	public static final WoodSetProperties KOUSA = WoodSetProperties.builder(MapColor.TERRACOTTA_CYAN).leavesColor(MapColor.SNOW).build();
+	public static final WoodSetProperties ASPEN = WoodSetProperties.builder(MapColor.GOLD).leavesColor(MapColor.GOLD).leavesSound(AtmosphericSoundTypes.ASPEN_LEAVES).build();
+	public static final WoodSetProperties GREEN_ASPEN = WoodSetProperties.builder(MapColor.GOLD).leavesColor(MapColor.TERRACOTTA_LIGHT_GREEN).leavesSound(AtmosphericSoundTypes.ASPEN_LEAVES).build();
+	public static final WoodSetProperties LAUREL = WoodSetProperties.builder(MapColor.TERRACOTTA_YELLOW).leavesColor(MapColor.TERRACOTTA_LIGHT_GREEN).leavesSound(AtmosphericSoundTypes.LAUREL_LEAVES).build();
+	public static final WoodSetProperties DRY_LAUREL = WoodSetProperties.builder(MapColor.TERRACOTTA_YELLOW).leavesColor(MapColor.SAND).leavesSound(AtmosphericSoundTypes.LAUREL_LEAVES).build();
+	public static final WoodSetProperties KOUSA = WoodSetProperties.builder(MapColor.TERRACOTTA_CYAN).leavesColor(MapColor.SNOW).leavesSound(AtmosphericSoundTypes.KOUSA_LEAVES).build();
 	public static final WoodSetProperties CURRANT = WoodSetProperties.builder(MapColor.TERRACOTTA_GRAY).logSound(AtmosphericSoundTypes.CURRANT_STALK).leavesColor(MapColor.PODZOL).leavesSound(AtmosphericSoundTypes.CURRANT_LEAVES).build();
 	public static final WoodSetProperties GRIMWOOD = WoodSetProperties.builder(MapColor.TERRACOTTA_BLACK).build();
 
@@ -77,10 +77,10 @@ public class AtmosphericProperties {
 		return Properties.of().mapColor(color).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(2.0F, 6.0F).sound(AtmosphericSoundTypes.ARID_SANDSTONE);
 	}
 
-	public static final Properties AGAVE = Properties.of().mapColor(MapColor.TERRACOTTA_CYAN).replaceable().noCollission().instabreak().sound(SoundType.GRASS).offsetType(OffsetType.XYZ).ignitedByLava().pushReaction(PushReaction.DESTROY);
+	public static final Properties AGAVE = Properties.of().mapColor(MapColor.TERRACOTTA_CYAN).replaceable().noCollission().instabreak().sound(AtmosphericSoundTypes.AGAVE).offsetType(OffsetType.XYZ).ignitedByLava().pushReaction(PushReaction.DESTROY);
 	public static final Properties GOLDEN_GROWTHS = Properties.of().mapColor(MapColor.GOLD).replaceable().noCollission().instabreak().sound(AtmosphericSoundTypes.GOLDEN_GROWTHS).offsetType(OffsetType.XYZ).ignitedByLava().pushReaction(PushReaction.DESTROY);
-	public static final Properties CRUSTOSE = BlockBehaviour.Properties.of().mapColor(MapColor.GOLD).randomTicks().strength(0.6F).sound(SoundType.GRASS);
-	public static final Properties CRUSTOSE_PATH = Properties.of().mapColor(MapColor.GOLD).strength(0.65F).sound(SoundType.GRASS).isViewBlocking(PropertyUtil::always).isSuffocating(PropertyUtil::always);
+	public static final Properties CRUSTOSE = BlockBehaviour.Properties.of().mapColor(MapColor.GOLD).randomTicks().strength(0.6F).sound(AtmosphericSoundTypes.CRUSTOSE);
+	public static final Properties CRUSTOSE_PATH = Properties.of().mapColor(MapColor.GOLD).strength(0.65F).sound(AtmosphericSoundTypes.CRUSTOSE).isViewBlocking(PropertyUtil::always).isSuffocating(PropertyUtil::always);
 
 	public static final Properties IVORY_TRAVERTINE = Properties.of().mapColor(MapColor.TERRACOTTA_WHITE).requiresCorrectToolForDrops().strength(3.5F, 6.0F);
 	public static final Properties PEACH_TRAVERTINE = Properties.of().mapColor(MapColor.TERRACOTTA_PINK).requiresCorrectToolForDrops().strength(3.5F, 6.0F);
